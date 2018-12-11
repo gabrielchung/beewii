@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>BeeWii</title>
+</head>
+<body>
+    <h1>BeeWii</h1>
+    <h2>Directory for Useful Tools</h2>
+    <table>
+        <thead>
+            <th>Category</th>
+            <th>Use Case</th>
+            <th>Name</th>
+            <th>Link</th>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Business</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Entertainment</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Finance</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Health</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Lifestyle</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Music</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>News</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Photo</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Productivity</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Reference</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Reference</td>
+                <td>Web Search</td>
+                <td>Google</td>
+                <td>https://google.com</td>
+            </tr>
+            <tr>
+                <td>Reference</td>
+                <td>Web Search</td>
+                <td>Bing</td>
+                <td>https://bing.com</td>
+            </tr>
+            <tr>
+                <td>Reference</td>
+                <td>Web Search</td>
+                <td>Yahoo Search</td>
+                <td>https://search.yahoo.com</td>
+            </tr>
+            <tr>
+                <td>Social</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Utilities</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>Video</td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+<script>
+    const link_col_index = 3;
+    function anchor_all_links() {
+
+        const trs = document.getElementsByTagName('tr');
+        const trs_len = trs.length;
+        var link_cell_content;
+
+        for (var i=1; i<trs_len; i++) {
+
+            link_cell_content = trs[i].getElementsByTagName('td')[link_col_index].innerHTML;
+            if (link_cell_content === '') {
+                continue;
+            }
+            console.log(link_cell_content);
+            trs[i].getElementsByTagName('td')[link_col_index].innerHTML = '<a href="' + link_cell_content + '" target="_blank">' + link_cell_content + '</a>';
+        }     
+    }
+    anchor_all_links();
+</script>
+</html>
