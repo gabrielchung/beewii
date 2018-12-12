@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>BeeWii</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #999;
+            color: #333;
+        }
+        h1, h2 {
+            text-align: center;
+        }
+        h1 {
+            color: #fff;
+            font-size: 60px;
+            font-family: "Whitney Cond A", "Whitney Cond B", "Lato", "Lucida Grande", "Lucida Sans Unicode", Tahoma, Sans-Serif;
+            text-shadow: 2px 2px #ddd;
+            /* font-family: "apercu",sans-serif; */
+        }
+        h2 {
+            color: #666;
+        }
+        a {
+            text-decoration: none;
+        }
+        table {
+            border: 0;
+            border-spacing: 0;
+
+            padding: 50px 50px;
+            width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            border: 1px #000;
+            background-color: #fff;
+            border-radius: 10px;
+            text-align: left;
+
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 18px;
+            line-height: 35px;
+
+            margin-bottom: 100px;
+        }
+        table th {
+            font-size: 22px;
+        }
+        table tr:nth-child(6),tr:nth-child(14) {
+            /* background-color: red; */
+            height: 20px;
+        }
+        table tr:nth-child(7),tr:nth-child(15) {
+            background-color: #ddd;
+            height: 2px;
+            line-height: 2px;
+        }
+        table tr:nth-child(7) td, tr:nth-child(15) td {
+            padding: 0;
+        }
+        table tr:nth-child(8),tr:nth-child(16) {
+            /* background-color: yellow; */
+            height: 20px;
+        }
+        table tr {
+            padding: 0;
+            border: 0;
+        }
+        table th,td {
+            margin: 0;
+            padding: 3px 5px;
+            border: 0;
+        }
+        table th {
+            padding-bottom: 10px;
+        }
+        table th:nth-child(1),td:nth-child(1) {
+            width: 25%;
+        }
+        table th:nth-child(2),td:nth-child(2) {
+            width: 35%;
+        }
+        table th:nth-child(3),td:nth-child(3) {
+            width: 40%;
+        }
+        app_link {
+            background-color: #429ef4;
+            padding: 5px;
+            border-radius: 5px;
+            color: #fff;
+            font-size: 15px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Directory for Useful Tools</h1>
+    <div id="table_div">
+        <table>
+            <thead>
+                <th>Category</th>
+                <th>Name</th>
+                <th>Link</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Business</td>
+                    <td>Office 365</td>
+                    <td><a href="https://office365.com" target="_blank"><app_link>App</app_link></a></td>
+                </tr>
+                <tr>
+                    <td>Entertainment</td>
+                    <td>Youtube</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Finance</td>
+                    <td>WSJ</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Health</td>
+                    <td>Nike Training Club</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Lifestyle</td>
+                    <td>Wordpress</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Music</td>
+                    <td>Spotify</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>News</td>
+                    <td>CNN</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Photo</td>
+                    <td>500px</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Productivity</td>
+                    <td>Wunderlist</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Reference</td>
+                    <td>Google</td>
+                    <td>https://google.com</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Social</td>
+                    <td>Twitter</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Utilities</td>
+                    <td>Calculator</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Video</td>
+                    <td>Adobe Premiere</td>
+                    <td></td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
+</body>
+<script>
+    const link_col_index = 2;
+    function anchor_all_links() {
+
+        const trs = document.getElementsByTagName('tr');
+        const trs_len = trs.length;
+        var link_cell_content;
+
+        for (var i=1; i<trs_len; i++) {
+
+            link_cell_content = trs[i].getElementsByTagName('td')[link_col_index].innerHTML;
+            if (link_cell_content === '') {
+                continue;
+            }
+            console.log(link_cell_content);
+            trs[i].getElementsByTagName('td')[link_col_index].innerHTML = '<a href="' + link_cell_content + '" target="_blank">' + link_cell_content + '</a>';
+        }     
+    }
+    // anchor_all_links();
+</script>
+</html>
