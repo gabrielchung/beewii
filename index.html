@@ -10,6 +10,9 @@
             background-color: #999;
             color: #333;
         }
+        * {
+            /* border: 1px solid red !important; */
+        }
         h1, h2 {
             text-align: center;
         }
@@ -22,6 +25,18 @@
         }
         h2 {
             color: #666;
+        }
+        a {
+            text-decoration: none;
+        }
+        img {
+            /* margin-top: 5px; */
+            /* margin: 0; */
+            padding: 0;
+            height: 24px;
+            width: 24px;
+            /* line-height: 35px; */
+            vertical-align: bottom;
         }
         table {
             border: 0;
@@ -37,8 +52,13 @@
             text-align: left;
 
             font-family: Arial, Helvetica, sans-serif;
-            font-size: 15px;
-            line-height: 20px;
+            font-size: 18px;
+            /* line-height: 35px; */
+
+            margin-bottom: 100px;
+        }
+        table th {
+            font-size: 22px;
         }
         table tr:nth-child(6),tr:nth-child(14) {
             /* background-color: red; */
@@ -62,54 +82,74 @@
         }
         table th,td {
             margin: 0;
-            padding: 3px 5px;
+            padding: 0;
+            vertical-align: bottom;
+            /* padding: 3px 5px; */
+            padding: 10px 0;
             border: 0;
         }
         table th {
             padding-bottom: 10px;
         }
         table th:nth-child(1),td:nth-child(1) {
-            width: 25%;
+            width: 7.5%;
         }
         table th:nth-child(2),td:nth-child(2) {
-            width: 35%;
+            width: 25%;
         }
         table th:nth-child(3),td:nth-child(3) {
-            width: 40%;
+            width: 30%;
+        }
+        table th:nth-child(4),td:nth-child(4) {
+            width: 37.5%;
+        }
+        app_link {
+            background-color: #429ef4;
+            padding: 5px;
+            border-radius: 5px;
+            color: #fff;
+            font-size: 15px;
         }
     </style>
 </head>
 <body>
-    <h1>Directory for Useful Tools</h1>
+    <h1>Useful Tools</h1>
     <div id="table_div">
         <table>
             <thead>
+                <th></th>
                 <th>Category</th>
                 <th>Name</th>
                 <th>Link</th>
             </thead>
             <tbody>
                 <tr>
-                    <td>Business</td>
+                    <td><img src="baseline_business_black_48dp.png"></td>
+                    <td><span>Business</span></td>
                     <td>Office 365</td>
                     <td></td>
+                    <!-- <td><a href="https://office365.com" target="_blank"><app_link>App</app_link></a></td> -->
                 </tr>
                 <tr>
+                    <td><img src="baseline_local_bar_black_48dp.png"></td>
                     <td>Entertainment</td>
                     <td>Youtube</td>
                     <td></td>
                 </tr>
                 <tr>
+                    <td><img src="baseline_monetization_on_black_48dp.png"></td>
                     <td>Finance</td>
                     <td>WSJ</td>
                     <td></td>
                 </tr>
                 <tr>
+                    <td><img src="baseline_fitness_center_black_48dp.png"></td>
                     <td>Health</td>
                     <td>Nike Training Club</td>
                     <td></td>
                 </tr>
                 <tr>
+                    <td><img src="baseline_mood_black_48dp.png"></td>
                     <td>Lifestyle</td>
                     <td>Wordpress</td>
                     <td></td>
@@ -118,68 +158,83 @@
                     <td></td>
                     <td></td>
                     <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
                     <td></td>
                 </tr>
                 <tr>
                     <td></td>
                     <td></td>
                     <td></td>
+                    <td></td>
                 </tr>
                 <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><img src="baseline_library_music_black_48dp.png"></td>
                     <td>Music</td>
                     <td>Spotify</td>
                     <td></td>
                 </tr>
                 <tr>
+                    <td><img src="baseline_ballot_black_48dp.png"></td>
                     <td>News</td>
                     <td>CNN</td>
                     <td></td>
                 </tr>
                 <tr>
+                    <td><img src="baseline_photo_camera_black_48dp.png"></td>
                     <td>Photo</td>
                     <td>500px</td>
                     <td></td>
                 </tr>
                 <tr>
+                    <td><img src="baseline_build_black_48dp.png"></td>
                     <td>Productivity</td>
                     <td>Wunderlist</td>
                     <td></td>
                 </tr>
                 <tr>
+                    <td><img src="baseline_local_offer_black_48dp.png"></td>
                     <td>Reference</td>
                     <td>Google</td>
-                    <td>https://google.com</td>
+                    <td></td>
+                    <!-- <td>https://google.com</td> -->
                 </tr>
                 <tr>
                     <td></td>
                     <td></td>
                     <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
                     <td></td>
                 </tr>
                 <tr>
                     <td></td>
                     <td></td>
                     <td></td>
+                    <td></td>
                 </tr>
                 <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td><img src="baseline_group_black_48dp.png"></td>
                     <td>Social</td>
                     <td>Twitter</td>
                     <td></td>
                 </tr>
                 <tr>
+                    <td><img src="baseline_keyboard_black_48dp.png"></td>
                     <td>Utilities</td>
                     <td>Calculator</td>
                     <td></td>
                 </tr>
                 <tr>
+                    <td><img src="baseline_videocam_black_48dp.png"></td>
                     <td>Video</td>
                     <td>Adobe Premiere</td>
                     <td></td>
@@ -213,6 +268,6 @@
             trs[i].getElementsByTagName('td')[link_col_index].innerHTML = '<a href="' + link_cell_content + '" target="_blank">' + link_cell_content + '</a>';
         }     
     }
-    anchor_all_links();
+    // anchor_all_links();
 </script>
 </html>
